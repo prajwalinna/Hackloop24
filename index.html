@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GovAlert</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState } = React;
+
+        const Header = () => (
+            <header className="flex justify-between items-center py-4">
+                <h1 className="text-4xl font-bold text-blue-600">GovAlert</h1>
+                <nav>
+                    <ul className="flex space-x-4">
+                        <li><a href="#" className="text-gray-700 hover:text-blue-600">Home</a></li>
+                        <li><a href="#" className="text-gray-700 hover:text-blue-600">Reports</a></li>
+                        <li><a href="#" className="text-gray-700 hover:text-blue-600">About</a></li>
+                        <li><a href="#" className="text-gray-700 hover:text-blue-600">Contact</a></li>
+                        <li><a href="#" className="text-gray-700 hover:text-blue-600">Login</a></li>
+                        <li><a href="#" className="text-gray-700 hover:text-blue-600">SignUp</a></li>
+                    </ul>
+                </nav>
+            </header>
+        );
+
+        const HomePage = () => (
+            <div className="container mx-auto p-6">
+                <Header />
+                <main className="mt-8">
+                    <section className="text-center mb-12">
+                        <h2 className="text-3xl font-bold text-gray-800 mb-4">Welcome to GovAlert</h2>
+                        <p className="text-gray-600 text-lg">
+                            Facilitating communication between citizens and local governments. Report community issues directly and track their progress.
+                        </p>
+                    </section>
+                    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="bg-white shadow-md rounded-lg p-6 text-center">
+                            <i className="fas fa-bullhorn text-blue-600 text-4xl mb-4"></i>
+                            <h3 className="text-2xl font-bold text-gray-800 mb-2">Report Issues</h3>
+                            <p className="text-gray-600">Submit reports about local issues, attach photos, and provide descriptions.</p>
+                        </div>
+                        <div className="bg-white shadow-md rounded-lg p-6 text-center">
+                            <i className="fas fa-map-marked-alt text-blue-600 text-4xl mb-4"></i>
+                            <h3 className="text-2xl font-bold text-gray-800 mb-2">Map Issues</h3>
+                            <p className="text-gray-600">View reported issues on a map to enhance visibility for local governments.</p>
+                        </div>
+                        <div className="bg-white shadow-md rounded-lg p-6 text-center">
+                            <i className="fas fa-comments text-blue-600 text-4xl mb-4"></i>
+                            <h3 className="text-2xl font-bold text-gray-800 mb-2">Government Response</h3>
+                            <p className="text-gray-600">Local government officials can respond to reports and update their status.</p>
+                        </div>
+                        <div className="bg-white shadow-md rounded-lg p-6 text-center">
+                            <i className="fas fa-tasks text-blue-600 text-4xl mb-4"></i>
+                            <h3 className="text-2xl font-bold text-gray-800 mb-2">Track Progress</h3>
+                            <p className="text-gray-600">Users can track the progress of their reports, fostering engagement and trust.</p>
+                        </div>
+                        <div className="bg-white shadow-md rounded-lg p-6 text-center">
+                            <i className="fas fa-users text-blue-600 text-4xl mb-4"></i>
+                            <h3 className="text-2xl font-bold text-gray-800 mb-2">Community Engagement</h3>
+                            <p className="text-gray-600">Encourage community involvement and collaboration to address local issues.</p>
+                        </div>
+                        <div className="bg-white shadow-md rounded-lg p-6 text-center">
+                            <i className="fas fa-shield-alt text-blue-600 text-4xl mb-4"></i>
+                            <h3 className="text-2xl font-bold text-gray-800 mb-2">Transparency</h3>
+                            <p className="text-gray-600">Ensure transparency and accountability in local government operations.</p>
+                        </div>
+                    </section>
+                </main>
+                <footer className="mt-12 text-center text-gray-600">
+                    <p>&copy; 2024 GovAlert. All rights reserved.</p>
+                </footer>
+            </div>
+        );
+
+        ReactDOM.render(<HomePage />, document.getElementById('root'));
+    </script>
+</body>
+</html>
